@@ -74,3 +74,22 @@ a {
     color:teal;
     text-decoration: none;
 }
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    .box,
+    .project,
+    section {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
