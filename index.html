@@ -17,49 +17,125 @@
         </ul>
     </nav>
 
-    <header>
-        <h1>Arun Sivarasa</h1>
-        <p>Future Web Developer 💻 </p>
-    </header>
-
-<section id="About">
-    <h2>About Me</h2>
-    <p>I am learning HTML and CSS. I enjoy building simple websites and wnt to become a professional wep developer.</p>
-</section>
-
-<section id="skills">
-    <h2>My Skills</h2>
-    <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>Basic JavaScript</li>
+<!-- 🌐 Language Switcher -->
+<div class="language-switch">
+    <button onclick="showLang('en')">🇬🇧 English</button>
+    <button onclick="showLang('de')">🇩🇪 Deutsch</button>
+  </div>
+  
+  <!-- 🧑‍💻 Header -->
+  <header>
+    <h1 class="en">Arun Sivarasa</h1>
+    <p class="en">Future Web Developer 💻</p>
+  
+    <h1 class="de">Arun Sivarasa</h1>
+    <p class="de">Zukünftiger Webentwickler 💻</p>
+  </header>
+  
+  <!-- 👤 About Me -->
+  <section id="about">
+    <h2 class="en">About Me</h2>
+    <p class="en">I’m a passionate learner of web development.</p>
+  
+    <h2 class="de">Über mich</h2>
+    <p class="de">Ich bin ein leidenschaftlicher Lernender in der Webentwicklung.</p>
+  </section>
+  
+  <!-- 🛠 Skills -->
+  <section id="skills">
+    <h2 class="en">My Skills</h2>
+    <ul class="en">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>Basic JavaScript</li>
     </ul>
-</section>
-
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-        <h3>My First Website</h3>
-        <p>A simple page created using HTML & CSS</p>
+  
+    <h2 class="de">Meine Fähigkeiten</h2>
+    <ul class="de">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>Grundlagen von JavaScript</li>
+    </ul>
+  </section>
+  
+  <!-- 📁 Projects -->
+  <section id="projects">
+    <h2 class="en">Projects</h2>
+    <div class="project en">
+      <h3>My First Website</h3>
+      <p>A basic site created with HTML and CSS.</p>
     </div>
-</section>
-
-<section id="gallery">
-    <h2>Photo gallery</h2>
+  
+    <h2 class="de">Projekte</h2>
+    <div class="project de">
+      <h3>Meine erste Website</h3>
+      <p>Eine einfache Webseite mit HTML und CSS erstellt.</p>
+    </div>
+  </section>
+  
+  <!-- 🖼️ Gallery -->
+  <section id="gallery">
+    <h2 class="en">Photo Gallery</h2>
+    <h2 class="de">Fotogalerie</h2>
+  
     <div class="gallery">
-        <img src="https://picsum.photos/200?random=1" alt="Photo 1">
-        <img src="https://picsum.photos/200?random=1" alt="Photo 2">
-        <img src="https://picsum.photos/200?random=1" alt="Photo 3">
-        <img src="https://picsum.photos/200?random=1" alt="Photo 4">
-        <img src="https://picsum.photos/200?random=1" alt="Photo 5">
-        <img src="https://picsum.photos/200?random=1" alt="photo 6">
+      <img src="https://via.placeholder.com/200" alt="Photo 1">
+      <img src="https://via.placeholder.com/200" alt="Photo 2">
+      <img src="https://via.placeholder.com/200" alt="Photo 3">
     </div>
-</section>
-    
-<section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email me at: <a href="mailto:aruunsiva@icloud.com">aruunsiva@icloud.com</a></p>
-</section>
+  </section>
+  
+  <!-- 📬 Contact -->
+  <section id="contact">
+    <h2 class="en">Contact Me</h2>
+    <form class="en" action="https://formspree.io/f/yourformid" method="POST">
+      <label for="name">Name</label><br>
+      <input type="text" name="name" id="name" required><br><br>
+  
+      <label for="email">Email</label><br>
+      <input type="email" name="email" id="email" required><br><br>
+  
+      <label for="message">Message</label><br>
+      <textarea name="message" id="message" rows="5" required></textarea><br><br>
+  
+      <button type="submit">Send Message</button>
+    </form>
+  
+    <h2 class="de">Kontakt</h2>
+    <form class="de" action="https://formspree.io/f/yourformid" method="POST">
+      <label for="name">Name</label><br>
+      <input type="text" name="name" id="name" required><br><br>
+  
+      <label for="email">E-Mail</label><br>
+      <input type="email" name="email" id="email" required><br><br>
+  
+      <label for="message">Nachricht</label><br>
+      <textarea name="message" id="message" rows="5" required></textarea><br><br>
+  
+      <button type="submit">Nachricht senden</button>
+    </form>
+  </section>
+
+<script>
+    function toggleMenu() {
+        const navLinks =document.getElementById('nav-links');
+        navLinks.classList.toggle('show');
+    }
+</script>
+
+<script>
+    function showLang(lang) {
+      const allLangs = ['en', 'de'];
+      allLangs.forEach(l => {
+        document.querySelectorAll('.' + l).forEach(el => {
+          el.style.display = (l === lang) ? 'block' : 'none';
+        });
+      });
+    }
+  
+    // Show English by default
+    showLang('en');
+  </script>
 
 </body>
 </html>
