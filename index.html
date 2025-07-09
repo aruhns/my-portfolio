@@ -129,9 +129,13 @@
         const navLinks =document.getElementById('nav-links');
         navLinks.classList.toggle('show');
     }
-</script>
+    // CLOSE menu after clicking a link (on mobile)
+    function closeMenu() {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.classList.remove('show');
+    }
 
-<script>
+
     function showLang(lang) {
       const allLangs = ['en', 'de'];
       allLangs.forEach(l => {
