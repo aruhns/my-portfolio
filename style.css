@@ -84,6 +84,24 @@ body {
     color: rgb(red, green, blue);
 }
 
+.language-switch {
+    text-align: center;
+    margin: 20px 0;
+}
+.language-switch button {
+    margin: 5px;
+    padding: 8px 16px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.language-switch button:hover {
+    background-color: 005fa3;
+}
+
 header {
     background-color:teal;
     color: white;
