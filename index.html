@@ -125,29 +125,29 @@
   </section>
 
 <script>
-    function toggleMenu() {
-        const navLinks =document.getElementById('nav-links');
-        navLinks.classList.toggle('show');
-    }
-    // CLOSE menu after clicking a link (on mobile)
-    function closeMenu() {
-        const navLinks = document.getElementById('nav-links');
-        navLinks.classList.remove('show');
-    }
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('show');
+        }
+        // CLOSE menu after clicking a link (on mobile)
+        function closeMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.remove('show');
+        }
 
 
-    function showLang(lang) {
-      const allLangs = ['en', 'de'];
-      allLangs.forEach(l => {
-        document.querySelectorAll('.' + l).forEach(el => {
-          el.style.display = (l === lang) ? 'block' : 'none';
-        });
-      });
-    }
-  
-    // Show English by default
-    showLang('en');
-  </script>
+        function showLang(lang) {
+            const allLangs = ['en', 'de'];
+            allLangs.forEach(l => {
+                document.querySelectorAll('.' + l).forEach(el => {
+                    el.style.display = (l === lang) ? 'block' : 'none';
+                });
+            });
+        }
+
+        // Show English by default
+        showLang('en');
+    </script>
 
 </body>
 </html>
