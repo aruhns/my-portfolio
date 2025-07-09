@@ -139,3 +139,18 @@ a {
         height: auto;
     }
 }
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 150px;
+    margin-top: 20px;
+}
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
